@@ -1,0 +1,21 @@
+<div class="filters">
+    <h3>Filter Deals</h3>
+    <span class="example-list-section">
+        <h4>Features</h4>
+        <ul>
+            <li *ngFor="let item of featuresList">
+                <mat-checkbox (change)='onChange($event)' color='primary'>{{item.name}}</mat-checkbox>
+            </li>
+        </ul>
+    </span>
+
+    <span class="example-list-section">
+        <h4>Brands</h4>
+        <ul>
+            <li *ngFor="let item of brandList">
+                <mat-checkbox (change)='onChange($event)' (click)="onSelectBrand(item.id)" color='primary'>{{item.name}}</mat-checkbox>
+            </li>
+        </ul>
+    </span>
+</div>
+
